@@ -1,3 +1,51 @@
 class ApplicationController < Sinatra::Base
-    
+    set default_content_type: "application/json"
+
+    get '/books' do
+        books = Book.all
+        books.to_json
+    end
+
+    get '/books/:id' do
+        book = Book.find(params[:id])
+        book.to_json(include: :author)
+    end
+
+    get '/authors' do
+        author = Author.all
+        author.to_json
+    end
+
+    get '/authors/:id' do
+        author = Author.find(params[:id])
+        author.to_json(include: :books)
+    end
+
+    post '/books' do
+        new_books = Book.create(
+            title: params[:title],
+            image_url: params[:image_url],
+            publisher: params[:publisher],
+            genre: params[:genre],
+            author_id: params[:author_id],
+            rating: params[:rating]
+        )
+        # binding.pry
+        new_books.to_json
+    end
+
+    patch '/books/:id' do
+        book = Book.find(params[:id])
+        book.update(
+            title: params[:title],
+            image_url: params[:image_url],
+            rating: params[:rating]
+        )
+    end
+
+    delete '/books/:id' do
+        book = Book.find(params[:id])
+        book.destroy
+        book.to_json
+    end
 end
