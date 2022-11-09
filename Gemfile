@@ -30,17 +30,9 @@ gem "require_all"
 
 # These gems will only be used when we are running the application locally
   # Used to generate seed data
-  # https://github.com/faker-ruby/faker
-  gem "faker", "~> 2.18"
 
   # Auto-reload the server when files are changed
   # https://github.com/alexch/rerun
-  gem "rerun"
+gem "rerun"
 
-  gem "pry"
-
-# These gems will only be used when we are running tests
-  gem "database_cleaner"
-  gem "rspec"
-  gem "rack-test", "~> 1.1"
-  gem "rspec-json_expectations", "~> 2.2"
+gem "pry"
