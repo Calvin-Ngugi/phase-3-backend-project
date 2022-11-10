@@ -3,7 +3,7 @@ class ApplicationController < Sinatra::Base
 
     get '/books' do
         books = Book.all
-        books.to_json
+        books.to_json(include: :author)
     end
 
     get '/books/:id' do
