@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+ruby "3.1.2"
 # A DSL for quickly creating web applications
 # https://github.com/sinatra/sinatra
 gem "sinatra", "~> 2.1"
@@ -35,4 +36,7 @@ gem "require_all"
   # https://github.com/alexch/rerun
 gem "rerun"
 
+
 gem "pry"
+
+gem "puma", "~> 6.0"
