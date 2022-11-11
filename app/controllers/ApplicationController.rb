@@ -11,16 +11,6 @@ class ApplicationController < Sinatra::Base
         book.to_json(include: :author)
     end
 
-    get '/authors' do
-        author = Author.all
-        author.to_json
-    end
-
-    get '/authors/:id' do
-        author = Author.find(params[:id])
-        author.to_json(include: :books)
-    end
-
     post '/books' do
         new_books = Book.create(
             title: params[:title],
@@ -47,5 +37,21 @@ class ApplicationController < Sinatra::Base
         book = Book.find(params[:id])
         book.destroy
         book.to_json
+    end
+
+    delete '/authors/:id' do
+        author = Author.find(params[:id])
+        author.destroy
+        author.to_json
+    end
+    
+    get '/authors' do
+        author = Author.all
+        author.to_json
+    end
+
+    get '/authors/:id' do
+        author = Author.find(params[:id])
+        author.to_json(include: :books)
     end
 end

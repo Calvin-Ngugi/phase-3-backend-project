@@ -10,7 +10,7 @@ puts "🌱 Seeding data..."
         genre: "Romance",
         publisher: "Atria Books",
         rating: 4,
-        author_id: 33
+        author_id: 41
     )
     Book.create(
         title: "Atomic Habits",
@@ -18,7 +18,7 @@ puts "🌱 Seeding data..."
         genre: "Self help",
         publisher: "Penguin",
         rating: 5,
-        author_id: 34
+        author_id: 42
     )
     Book.create(
         title: "Diary of a Wimpy Kid Blank Journal",
@@ -26,7 +26,7 @@ puts "🌱 Seeding data..."
         genre: "Comedy",
         publisher: "Amulet books",
         rating: 5,
-        author_id: 35
+        author_id: 44
     )
     Book.create(
         title: "Harry Porter and the Order of the Phoenix",
@@ -34,7 +34,7 @@ puts "🌱 Seeding data..."
         genre: "Fantasy",
         publisher: "Bloomsbury",
         rating: 4,
-        author_id: 36
+        author_id: 43
     )
     Book.create(
         title: "It Starts with Us",
@@ -42,7 +42,7 @@ puts "🌱 Seeding data..."
         genre: "Romance",
         publisher: "Atria Books",
         rating: 4,
-        author_id: 33
+        author_id: 41
     )
     Book.create(
         title: "Harry Porter and the Goblet of Fire",
@@ -50,7 +50,7 @@ puts "🌱 Seeding data..."
         genre: "Fantasy",
         publisher: "Bloomsbury",
         rating: 5,
-        author_id: 36
+        author_id: 43
     )
     Book.create(
         title: "Diary of a Wimpy Kid Diper Overlode",
@@ -58,6 +58,6 @@ puts "🌱 Seeding data..."
         genre: "Comedy",
         publisher: "Amulet books",
         rating: 4,
-        author_id: 34
+        author_id: 44
     )
 puts "🌱 Done seeding!"
