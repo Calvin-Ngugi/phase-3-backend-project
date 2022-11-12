@@ -1,5 +1,7 @@
 class ApplicationController < Sinatra::Base
     set default_content_type: "application/json"
+    set :bind, '0.0.0.0'
+    set :port, 9494
 
     get '/books' do
         books = Book.all
