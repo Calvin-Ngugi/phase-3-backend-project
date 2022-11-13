@@ -19,7 +19,7 @@ class ApplicationController < Sinatra::Base
             image_url: params[:image_url],
             publisher: params[:publisher],
             genre: params[:genre],
-            author_id: params[:author_id],
+            author: params[:author_id],
             rating: params[:rating]
         )
         # binding.pry
@@ -31,6 +31,8 @@ class ApplicationController < Sinatra::Base
         book.update(
             title: params[:title],
             image_url: params[:image_url],
+            publisher: params[:publisher],
+            genre: params[:genre],
             rating: params[:rating]
         )
     end
