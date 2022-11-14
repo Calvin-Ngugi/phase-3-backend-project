@@ -1,9 +1,0 @@
-#Phase-3-backend-project
-<br/>
-It is a ruby sinatra backend for the main project
-
-This project is hosted on railway and the domain name is <code>https://phase-3-backend-project-production.up.railway.app/books</code>
-for the books table and <code>https://phase-3-backend-project-production.up.railway.app/authors</code> for the authors table
-<br>
-
-The database has 2 tables with a one to many relationship between the author and the books
