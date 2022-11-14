@@ -45,9 +45,9 @@ class ApplicationController < Sinatra::Base
             title: params[:title],
             image_url: params[:image_url],
             publisher: params[:publisher],
-            genre: params[:genre],
             rating: params[:rating]
         )
+        book.to_json
     end
 
     delete '/books/:id' do
@@ -70,5 +70,12 @@ class ApplicationController < Sinatra::Base
     get '/authors/:id' do
         author = Author.find(params[:id])
         author.to_json(include: :books)
+    end
+
+    post '/authors' do
+        new_author = Author.create(
+            name: params[:name],
+        )
+        new_author.to_json
     end
 end
